@@ -1,0 +1,175 @@
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+body {
+  background: #121212;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background: #1f1f1f;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: #00bcd4;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  color: #00bcd4;
+  background: rgba(0, 188, 212, 0.1);
+  border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  padding: 80px 40px;
+  min-height: 70vh;
+  transition: all 0.3s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+.section h2 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+/* DIFERENCIA DE SECCIONES */
+.section:nth-child(even) {
+  background: #1a1a1a;
+}
+
+/* BOTONES DE SECCIÓN (si agregas más adelante) */
+.button {
+  display: inline-block;
+  background: #00bcd4;
+  color: #111;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #0097a7;
+}
+
+/* FOOTER */
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: auto;
+
+}
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.miembro {
+    text-align: center;
+    color: white
+    font-family: Arial, sans-serif;
+}
+
+.miembro img {
+    width: 90px;
+    height:  90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom; 10px;
+}
+
+.miembro {
+    position: relative; width:  120px;
+    height: 120px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column
+}
+
+footer {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+    color: #aaa
+    font-size; 14px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #2b2b2b 0%,
+    #1a1a1a 60%,
+    #0d0d0d 100%
+  );
+  color: white;
+}
+.section {
+    background: transparent;
+}

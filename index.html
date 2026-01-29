@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FaxlyGames</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1 class="logo">FaxlyGames</h1>
+  <ul>
+    <li><button onclick="showSection('about')">Info</button></li>
+    <li><button onclick="showSection('games')">Juegos</button></li>
+    <li><button onclick="showSection('contact')">Contacto</button></li>
+    <li><button onclick="showSection('socials')">Redes</button></li>
+  </ul>
+</nav>
+  <!-- SOBRE NOSOTROS -->
+  <section id="about" class="section">
+    <h2>Sobre nosotros</h2>
+    <p>
+      Somos un team independiente de desarrollo de videojuegos.
+      Nos enfocamos en crear experiencias divertidas, creativas y con personalidad propia.
+    </p>
+      <div class="miembro">
+    <img src="cj.jpg" alt="Foto de CJ" class="foto">
+    <div class="info">
+      <h3>CJ</h3>
+      <p id="rol-cj">Programador, Lider</p>
+      <a id="link-cj" href="https://youtube.com/@cjotakay" target="_blank">YouTube</a>
+        
+    </div>
+          
+      <div class="miembro">
+    <img src="stefan.jpg" alt="Foto de Stefan" class="foto">
+    <div class="info">
+      <h3>Stefan2022</h3>
+      <p id="rol-stefan">Ilustrador</p>
+      <a id="link-stratus" href="https://www.youtube.com/@stefan2022xd" target="_blank">YouTube</a>
+        
+          <div class="miembro">
+    <img src="stratus.jpg" alt="Foto de Stratus" class="foto">
+    <div class="info">
+      <h3>Stratus</h3>
+      <p id="rol-stratus">Tester, Co-Lider</p>
+      <a id="link-stratus" href="https://www.instagram.com/starfiel18" target="_blank">Instagram</a>
+        
+           <div class="miembro">
+    <img src="salvador.jpg" alt="Foto de Stratus" class="foto">
+    <div class="info">
+      <h3>Salvador</h3>
+      <p id="rol-salvador">Ilustrador</p>
+      <a id="link-salvador" href="https://www.instagram.com/el_salvadorgd" target="_blank">Instagram</a>
+        
+    </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section id="games" class="section dark">
+    <h2>Juegos</h2>
+
+    <div class="game-card">
+      <h3>Juego 1</h3>
+      <p>Descripción breve del juego.</p>
+    </div>
+
+    <div class="game-card">
+      <h3>Juego 2</h3>
+      <p>Descripción breve del juego.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="section">
+    <h2>Contacto</h2>
+    <p>Email: contacto@miteam.com</p>
+    <p>Disponible para colaboraciones y proyectos.</p>
+  </section>
+
+  <!-- REDES SOCIALES -->
+  <section id="socials" class="section dark">
+    <h2>Redes sociales</h2>
+    <ul class="social-links">
+      <p><a id="redes-instagram" href="https://instagram.com/faxlygames" target="_blank">➼ Instagram</a></p>
+      <p><a id="redes-youtube" href="https://youtube.com/@faxlygamesoficial" target="_blank">➼ YouTube</a></p>
+    </ul>
+  </section>
+        
+<script>
+function showSection(id) {
+  var sections = document.getElementsByClassName("section");
+
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].classList.remove("active");
+  }
+
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+
+  <footer>
+    <p>© FaxlyGames ➼2026</p>
+  </footer>
+
+</html>	
+
