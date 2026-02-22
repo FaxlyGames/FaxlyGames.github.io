@@ -1,6 +1,10 @@
-let numButtonClicks = 0;
-function buttonClicked() {
-    numButtonClicks = numButtonClicks + 1;
-    document.getElementById("mainDiv").textContent =
-        "Button Clicked times: " + numButtonClicks;
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+
+function showSection(id) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    document.getElementById("menu").classList.remove("show");
 }
