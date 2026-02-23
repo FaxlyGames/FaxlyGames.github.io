@@ -1,21 +1,57 @@
 /* ===== ESTILO GENERAL ===== */
-body {
+/* ===== TIPOGRAFÍA PROFESIONAL ===== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap');
+/* ===== TIPOGRAFÍA PROFESIONAL ===== */
+
+/* ===== FONDO INSTITUCIONAL ===== */
+
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000000 70%, #444444 100%);
-    color: white;
+    padding: 0;
+    background: linear-gradient(to bottom, #0a192f, #000814, #2e2e2e);
+    background-attachment: fixed;
+    color: #f1f1f1;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
-/* ===== HEADER ===== */
-header {
-    background-color: #091120; /* Azul oscuro */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+/* TÍTULO PRINCIPAL (nombre de la página) */
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
+/* TÍTULOS DE SECCIÓN */
+section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* PÁRRAFOS */
+section p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* MENÚ */
+nav a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -33,10 +69,6 @@ header {
     color: #00aaff; /* Azul brillante */
 }
 
-/* ===== MENÚ ===== */
-nav {
-    position: relative;
-}
 
 .menu-btn {
     background: none;
@@ -80,7 +112,7 @@ nav {
 
 .menu button:hover {
     background-color: #0a1f44;
-    color: white;
+    color: #000000;
 }
 
 .menu.show {
@@ -100,4 +132,123 @@ section.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.foto_act {
+     width: 422322px;
+    height: 45px;
+}
+
+
+/* ===== GALERÍA ===== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* Overlay oscuro */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: 0.4s ease;
+}
+
+/* Hover efecto */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .overlay {
+    transform: translateY(0);
+}
+/* ===== REDES ===== */
+
+.redes-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+
+/* Colores oficiales */
+.facebook {
+    background: #1877f2;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.twitter {
+    background: #000000;
+}
+
+/* Hover elegante */
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+/* ===== INGRESO DISCORD ===== */
+
+.ingreso-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.discord-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #5865F2;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.discord-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
