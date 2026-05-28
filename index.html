@@ -1,109 +1,369 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ENC</title>
 
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>FaxlyGames</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fuente -->
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+  rel="stylesheet">
+
 </head>
+
 <body>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-<header>
-    <div class="logo">
-        <img src="adszx.png" alt="Logo">
-        <h1>𝐄𝐣é𝐫𝐜𝐢𝐭𝐨 𝐃𝐞 𝐥𝐚𝐬 𝐧𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐜𝐨𝐧𝐟𝐞𝐝𝐞𝐫𝐚𝐝𝐚𝐬</h1>
-    </div>
+<!-- ===================================
+     NAVBAR
+=================================== -->
 
-    <nav>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <div class="menu" id="menu">
-            <button onclick="showSection('inicio')">Inicio</button>
-            <button onclick="showSection('sobre')">Sobre nosotros</button>
-            <button onclick="showSection('ingreso')">Ingreso</button>
-            <button onclick="showSection('redes')">Redes</button>
-            <button onclick="showSection('fotos')">Fotos</button>
-        </div>
-    </nav>
-</header>
+<nav>
 
-<section id="inicio" class="active">
-    <h2>Bienvenido</h2>
-    <p>Bienvenido a la pagina web oficial de el Ejército de las Naciones Confederadas (ENC), aqui encontraras todas las secciones importantes</p>
+  <div class="logo">
+    FaxlyGames
+  </div>
+
+  <div class="nav-links">
+
+    <a href="#inicio"></a>
+
+  </div>
+
+</nav>
+
+<!-- ===================================
+     BOTON FLOTANTE
+=================================== -->
+
+<button class="floating-menu-btn"
+onclick="abrirMenu()">
+
+  Secciones
+
+</button>
+
+<!-- ===================================
+     HERO
+=================================== -->
+
+<section class="hero active-hero"
+id="inicio">
+
+  <div class="hero-content">
+
+    <h1>
+      Faxly<br>Games
+    </h1>
+
+    <p>
+      Bienvenido a la página web de FaxlyGames
+    </p>
+
+    <button onclick="abrirMenu()">
+      Explorar
+    </button>
+
+  </div>
+
 </section>
 
-<section id="sobre">
-    <h2>Sobre Nosotros</h2>
-    <p>El Ejército de las Naciones Confederadas (ENC) es una facción organizada y estructurada, enfocada en el trabajo en equipo, la disciplina y la mejora constante.Forma una comunidad basada en jerarquía, instrucción y cooperación, apta tanto para nuevos integrantes como para miembros con experiencia.</p>
+<!-- ===================================
+     MENU FULLSCREEN
+=================================== -->
+
+<div class="fullscreen-menu"
+id="fullscreenMenu">
+
+  <!-- CERRAR -->
+
+  <div class="close-btn"
+  onclick="cerrarMenu()">
+
+    ✕
+
+  </div>
+
+  <!-- LINKS -->
+
+  <div class="menu-content">
+
+    <a href="#"
+    onclick="mostrarSeccion('about')">
+
+      Sobre Nosotros
+
+    </a>
+
+    <a href="#"
+    onclick="mostrarSeccion('games')">
+
+      Juegos
+
+    </a>
+
+    <a href="#"
+    onclick="mostrarSeccion('gallery')">
+
+      Galería
+
+    </a>
+
+    <a href="#"
+    onclick="mostrarSeccion('news')">
+
+      Noticias
+
+    </a>
+
+    <a href="#"
+    onclick="mostrarSeccion('socials')">
+
+      Redes Sociales
+
+    </a>
+
+    <a href="#"
+    onclick="mostrarSeccion('contact')">
+
+      Contacto
+
+    </a>
+
+  </div>
+
+</div>
+
+<!-- ===================================
+     SOBRE NOSOTROS
+=================================== -->
+
+<section class="content-section hidden-section"
+id="about">
+
+  <div class="section-header">
+
+    <span>FAXLYGAMES</span>
+
+    <h2>
+      Estudio de desarrollo de videojuegos
+    </h2>
+
+    <p>
+      Somos un estudio independiente enfocado
+      en crear videojuegos divertidos.
+    </p>
+
+  </div>
+
 </section>
-<section id="ingreso">
-    <h2>Ingreso Oficial</h2>
 
-    <div class="ingreso-container">
-        <a href="https://discord.gg/TUENLACE" target="_blank" class="discord-btn">
-            <i class="fab fa-discord"></i>
-            Unirse a nuestro Discord
-        </a>
-    </div>
+<!-- ===================================
+     JUEGOS
+=================================== -->
+
+<section class="content-section hidden-section"
+id="games">
+
+  <div class="section-header">
+
+    <span>VIDEOJUEGOS</span>
+
+    <h2>
+      Nuestros Proyectos
+    </h2>
+
+  </div>
+
+  <div class="games-grid">
+
+ <div class="game-card">
+
+  <div class="game-image game1"></div>
+
+  <div class="game-info">
+
+    <h3>Chrismas Problems</h3>
+
+    <p>
+      Plataformero Navideño, frenético y complicado con 40 niveles
+    </p>
+    
+    <a href="https://faxlygames.itch.io/christmas-problems"
+       target="_blank"
+       class=dowload-btn>
+      DESCARGAR AHORA
+      </a>
+
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
 </section>
 
-<section id="redes">
-    <h2>Redes Oficiales</h2>
+<!-- ===================================
+     GALERIA
+=================================== -->
 
-    <div class="redes-container">
+<section class="content-section hidden-section"
+id="gallery">
 
-        
+  <div class="section-header">
 
-        <a href="https://www.instagram.com/enc_faccion/" target="_blank" class="social-btn instagram">
+    <span>GALERÍA</span>
+
+    <h2>
+      Capturas y Concept Arts
+    </h2>
+
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+
+  </div>
+
+</section>
+
+<!-- ===================================
+     NOTICIAS
+=================================== -->
+
+<section class="content-section hidden-section"
+id="news">
+
+  <div class="section-header">
+
+    <span>ACTUALIZACIONES</span>
+
+    <h2>
+      Últimas Noticias
+    </h2>
+
+  </div>
+
+  <div class="news-card">
+
+    <h3>
+      Nuevo Proyecto Anunciado
+    </h3>
+
+    <p>
+      FaxlyGames anuncia el desarrollo
+      de un nuevo título multijugador
+      ambientado en una megaciudad futurista.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ===================================
+     REDES
+=================================== -->
+
+<section class="content-section hidden-section"
+id="socials">
+
+  <div class="section-header">
+
+    <span>COMUNIDAD</span>
+
+    <h2>
+      Síguenos
+    </h2>
+
+  </div>
+
+  <div class="social-links">
+
+    <a href="https://www.instagram.com/faxlygames/?hl=es" target="_blank" class="social-btn instagram">
             <i class="fab fa-instagram"></i>
             Instagram
         </a>
 
-    </div>
+       <a href="https://www.youtube.com/@FaxlyGamesOficial" target="_blank" class="social-btn instagram">
+            <i class="fab fa-instagram"></i>
+            Youtube
+        </a>
+
+         <a href="https://faxlygames.itch.io/" target="_blank" class="social-btn instagram">
+            <i class="fab fa-instagram"></i>
+            Itch.io
+        </a>
+
+    
+
+  </div>
+
 </section>
 
+<!-- ===================================
+     CONTACTO
+=================================== -->
+
+<section class="content-section hidden-section"
+id="contact">
+
+  <div class="section-header">
+
+    <span>CONTACTO</span>
+
+    <h2>
+      Trabajemos juntos.
+    </h2>
+
+    <p>
+      Contacta con nuestro estudio para
+      colaboraciones, negocios o soporte.
+    </p>
+
+  </div>
+
+  
+
+  faxlygames@gmail.com
 
 
-<section id="fotos">
-    <h2>Galería</h2>
-    <div class="galeria">
 
-        <div class="card">
-            <img src="imagen.enc%201_pvp.png" alt="Imagen 1">
-            <div class="overlay">
-                <h3>Entrenamiento De Combate</h3>
-                <p>Simulacion De Combate</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagen2ordencerrado.png" alt="Imagen 2">
-            <div class="overlay">
-                <h3>Orden Cerrado</h3>
-                <p>Coordinación y precisión.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagen3_ordencerrado.png" alt="Imagen 3">
-            <div class="overlay">
-                <h3>Orden Cerrado</h3>
-                <p>Ejecucin de comandos.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagen4_orden%20cerrado.png" alt="Imagen 4">
-            <div class="overlay">
-                <h3>Orden Cerrado</h3>
-                <p>Ejecucion de comandos.</p>
-            </div>
-        </div>
-
-    </div>
 </section>
+
+<!-- ===================================
+     FOOTER
+=================================== -->
+
+<footer>
+
+  <p>
+
+  </p>
+
+</footer>
+
+<!-- JS -->
 
 <script src="script.js"></script>
+
 </body>
 </html>
