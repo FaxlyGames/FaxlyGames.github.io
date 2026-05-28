@@ -854,3 +854,95 @@ button{
   background:
   rgba(30,30,45,0.85);
 }
+
+
+/* ===================================
+   MIEMBROS
+=================================== */
+
+.team-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:30px;
+}
+
+/* CARD */
+
+.member-card{
+
+  background:
+  rgba(255,255,255,0.03);
+
+  border:
+  1px solid rgba(255,255,255,0.05);
+
+  border-radius:24px;
+
+  padding:40px 30px;
+
+  text-align:center;
+
+  transition:0.35s;
+}
+
+.member-card:hover{
+
+  transform:translateY(-8px);
+
+  border-color:
+  rgba(108,207,255,0.25);
+}
+
+/* FOTO */
+
+.member-card img{
+
+  width:120px;
+  height:120px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  margin-bottom:25px;
+
+  border:
+  3px solid rgba(255,255,255,0.08);
+}
+
+/* NOMBRE */
+
+.member-card h3{
+
+  font-size:1.5rem;
+
+  margin-bottom:10px;
+}
+
+/* ROL */
+
+.member-card span{
+
+  color:#78dfff;
+
+  font-weight:600;
+
+  font-size:0.95rem;
+
+  display:block;
+
+  margin-bottom:20px;
+}
+
+/* TEXTO */
+
+.member-card p{
+
+  color:#aeb6c4;
+
+  line-height:1.7;
+}
